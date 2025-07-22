@@ -1,0 +1,32 @@
+.redes-sociais {
+  background-color: #cac9bf50;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.redes-sociais img {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+.contato-whats {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white; /* ou a cor que preferir */
+  font-size: 16px;
+  gap: 10px; /* espaço entre ícone e texto */
+}
+
+.contato-whats span {
+  font-weight: bold;
+}
