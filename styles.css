@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  background-color:#e4d7d7 ;
+  color: #eb0909;
+}
+
+.header {
+  background-color: #cac9bf50;
+  color: rgb(248, 246, 246);
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  width: 50px;
+  float: left;
+}
+nav a {
+  color: rgb(241, 179, 5);
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagina-inicial {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('Assets/projeto-archshop.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.apresentacao {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  align-items: center;
+  min-height: calc(100vh - 140px);
+  color: rgb(252, 250, 250);
+  z-index: 1;
+  font-size: 17px;
+  padding-left: 60px; /* Adiciona margem interna à esquerda */
+}
+
+.mensagem {
+  text-align: center; /* Alinha o texto dentro da div à esquerda */
+}
+
+pagina-inicial::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('Assets/fundo-arquitetura.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2; /* Aqui está a transparência */
+  z-index: -1;
+  
+}
+
+
+
+
+
+
