@@ -6,7 +6,7 @@ body.com-imagem  {
   background-repeat: no-repeat;      /* Evita repetição da imagem */
   background-size: 750px;            /* Faz a imagem cobrir toda a área */
   background-position: right center; /* Centraliza a imagem */
-  background-attachment: fixed;      /* (Opcional) mantém fixa ao rolar */
+  background-attachment: fixed;      /* Mantém fixa ao rolar */
   background-color: rgba(10, 10, 1, 0.575);
 }
 body.sem-imagem {
@@ -41,10 +41,11 @@ header h1 {
   font-size: 40px;
 }
 header h3 {
-  font-size: 15px; /* Adicione a unidade */
-  margin: 5px 0 0;  /* Espaço acima opcional */
+  font-size: 15px;
+  margin: 5px 0 0;  
   text-align: center;
 }
+
 .links-direita {
   position: absolute;
   right: 20px;
@@ -60,7 +61,6 @@ header h3 {
   background-color: #555;
   border-radius: 5px;
   transition: background 0.3s ease;
-  /* removido position absolute daqui */
 }
 
 .link-direita:hover {
@@ -68,7 +68,7 @@ header h3 {
 }
 
 .container {
-  position: relative; /* necessário para que a imagem absoluta funcione dentro */
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,12 +83,12 @@ header h3 {
   transform: translateY(-50%);
   max-width: 450px;
   height: auto;
-  z-index: 0; /* atrás do texto se necessário */
+  z-index: 0; 
 }
 .texto {
   max-width: 50%;
   text-align: center;
-  margin-top: -100px; /* sobe a imagem e o texto */
+  margin-top: -100px; 
 }
 .texto h2 {
   margin-top:15px;
@@ -106,12 +106,12 @@ p {
 }
 
 .imagem-sobre {
-  display: inline-block;   /* Para respeitar o text-align do container */
-  max-width: 150px;       /* Ajuste o tamanho que quiser - imagem A2*/
+  display: inline-block;
+  max-width: 150px;
   width: 100%;
   height: auto;
   margin-top: 40px;
-  margin-bottom: 10px;    /* Espaço entre imagem e texto */
+  margin-bottom: 10px;
   border-radius: 10px;
 }
 
@@ -123,11 +123,64 @@ p {
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  transition: background 0.3s ease;
+}
+.botao:hover {
+  background-color: #e68a00;
 }
 .botoes {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Espaço entre os botões */
+  gap: 10px; 
   margin-top: 20px;
 }
 
+/* ============================= */
+/* LISTA DE RETROSPECTIVAS       */
+/* ============================= */
+.lista-retrospectivas {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);  
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.lista-retrospectivas div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lista-retrospectivas a {
+  display: block;
+  margin: 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1); 
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.lista-retrospectivas a:hover {
+  background: #ff9900; /* cor de destaque no hover */
+  color: #fff;
+  cursor: pointer;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1200px) {
+  .lista-retrospectivas {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+  }
+}
+@media (max-width: 768px) {
+  .lista-retrospectivas {
+    grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+  }
+}
